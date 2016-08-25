@@ -188,7 +188,7 @@ public final class OrganizationFolder extends ComputedFolder<MultiBranchProject<
                                 project.setOrphanedItemStrategy(getOrphanedItemStrategy());
                                 project.getSourcesList().addAll(createBranchSources());
                                 try {
-                                    project.addTrigger(new PeriodicFolderTrigger("1d"));
+                                    project.addTrigger(new PeriodicFolderTrigger("5m"));
                                 } catch (ANTLRException x) {
                                     throw new IllegalStateException(x);
                                 }
